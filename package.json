@@ -81,7 +81,8 @@
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "test:jest": "NODE_ENV=test jest -c config/jest/config.js"
+    "test:jest": "NODE_ENV=test jest -c config/jest/config.js",
+    "test:jest:coverage": "NODE_ENV=test jest -c config/jest/config.js --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
