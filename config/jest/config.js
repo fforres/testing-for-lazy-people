@@ -11,7 +11,7 @@ module.exports = {
   ],
   coverageReporters: ["json-summary", "text", "lcov"],
   moduleFileExtensions: ["js", "jsx", "json", "ts", "tsx"],
-  rootDir: "../",
+  rootDir: "../../",
   roots: ["<rootDir>/src"],
   // Jest comes with JSDOM@11 by default to support Node@6
   // Newer versions have much better Canvas support
@@ -23,7 +23,11 @@ module.exports = {
     // Emotion's <Global /> component.
     "\\.css$": "jest-raw-loader"
   },
-  setupFiles: ["<rootDir>/.jest/setup.js"],
+  setupFiles: [
+    "<rootDir>/config/jest/setup.js",
+    "<rootDir>/config/jest/cssTransform.js",
+    "<rootDir>/config/jest/fileTransform.js"
+  ],
   // By default, all node_modules are ignored
   // Be sure to process bootstrap's reboot.css during testing
   // react-syntax-highlighter also needs an exception as well
