@@ -80,13 +80,12 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "test:jest": "cross-env NODE_ENV=test jest -c config/jest/config-jest.js",
-    "test:jest:coverage": "yarn test:jest --coverage",
+    "test": "cross-env NODE_ENV=test jest -c config/jest/config-jest.js",
+    "test:cov": "yarn test:jest --coverage",
     "test:storybook": "cross-env NODE_ENV=test jest -c config/jest/config-storybook.js",
-    "test:storybook:coverage": "yarn test:storybook --coverage"
+    "test:storybook:cov": "yarn test:storybook --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
