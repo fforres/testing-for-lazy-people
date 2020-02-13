@@ -15,7 +15,7 @@ const Text: React.FC<Props> = ({ textType, text, longText }) => {
   return (
     <StyledContainer>
       {textType === TextType.LONG && <p>{longText}</p>}
-      {textType === TextType.SHORT && <div>{text}</div>}
+      {textType === TextType.SHORT ? <div>{text}</div> : null}
     </StyledContainer>
   );
 };

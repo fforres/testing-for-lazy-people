@@ -1,5 +1,4 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
 import Text, { TextType } from "./index";
 
 export default {
@@ -15,6 +14,10 @@ doloribus possimus molestiae.`;
 
 const shortText = "Quis sit qui nihil totam repudiandae harum est qui rerum.";
 
-export const SmallText: React.FC = () => (
-  <Text textType={TextType.LONG} text={shortText} longText={longText} />
+export const ShortText: React.FC = () => (
+  <Text textType={TextType.SHORT} text={shortText} longText={longText} />
 );
+
+// export const LongText: React.FC = () => (
+//   <Text textType={TextType.LONG} text={shortText} longText={longText} />
+// );
