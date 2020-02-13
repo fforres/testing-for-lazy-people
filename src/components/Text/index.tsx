@@ -1,17 +1,8 @@
 import React from "react";
 import { StyledContainer } from "./elements";
+import { TextType, TextProps } from "./types";
 
-export enum TextType {
-  LONG = "long",
-  SHORT = "short"
-}
-interface Props {
-  textType: TextType;
-  text: string;
-  longText: string;
-}
-
-const Text: React.FC<Props> = ({ textType, text, longText }) => {
+const Text: React.FC<TextProps> = ({ textType, text, longText }) => {
   return (
     <StyledContainer>
       {textType === TextType.LONG && <p>{longText}</p>}

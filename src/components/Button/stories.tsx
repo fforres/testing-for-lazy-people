@@ -13,7 +13,7 @@ export const WithText: React.FC = () => (
   </Button>
 );
 
-export const WithEmoji: React.FC = () => (
+export const WithEmojis: React.FC = () => (
   <Button onClick={action("clicked")} onHover={action("hovered")}>
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
