@@ -51,6 +51,7 @@
     "mini-css-extract-plugin": "0.9.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.0",
+    "polished": "^3.4.4",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
     "postcss-normalize": "8.0.1",
@@ -81,8 +82,10 @@
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "test:jest": "NODE_ENV=test jest -c config/jest/config.js",
-    "test:jest:coverage": "NODE_ENV=test jest -c config/jest/config.js --coverage"
+    "test:jest": "NODE_ENV=test jest -c config/jest/config-jest.js",
+    "test:jest:coverage": "yarn test:jest --coverage",
+    "test:storybook": "NODE_ENV=test jest -c config/jest/config-storybook.js",
+    "test:storybook:coverage": "yarn test:storybook --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -105,56 +108,6 @@
     "@storybook/addons": "^5.3.13",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jest-environment-jsdom-fourteen",
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ]
   },
   "babel": {
     "presets": [

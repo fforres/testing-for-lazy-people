@@ -4,9 +4,10 @@
 module.exports = {
   verbose: true,
   collectCoverageFrom: [
-    "<rootDir>/src/**/*.{ts,tsx,js,jsx}",
+    "<rootDir>/src/**/*.test.{ts,tsx,js,jsx}",
+    "<rootDir>/src/**/*stories.{ts,tsx,js,jsx}",
     "!<rootDir>/src/**/index.ts",
-    "!<rootDir>/src/**/*stories.(ts|md|js)x",
+    "!<rootDir>/src/**/stories.*.{ts,tsx,js,jsx}",
     "!**/*.d.ts"
   ],
   coverageReporters: ["json-summary", "text", "lcov"],
@@ -16,7 +17,6 @@ module.exports = {
   // Jest comes with JSDOM@11 by default to support Node@6
   // Newer versions have much better Canvas support
   testEnvironment: "jest-environment-jsdom-fifteen",
-  testRegex: "test\\.tsx?$",
   transform: {
     "\\.(js|ts)x?$": "babel-jest",
     // Use jest-raw-loader for CSS because we inject global styles using
