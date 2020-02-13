@@ -8,6 +8,6 @@ export default {
   component: UserProfile
 };
 
-// export const DefaultUserProfile: React.FC = () => (
-//   <UserProfile {...UserProfileProps} />
-// );
+export const DefaultUserProfile: React.FC = () => (
+  <UserProfile {...UserProfileProps} />
+);
