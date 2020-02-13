@@ -25,10 +25,10 @@ module.exports = {
     "\\.css$": "jest-raw-loader"
   },
   setupFiles: [
-    "<rootDir>/config/jest/setup.js",
     "<rootDir>/config/jest/cssTransform.js",
     "<rootDir>/config/jest/fileTransform.js"
   ],
+  setupFilesAfterEnv: ["<rootDir>/config/jest/setup.ts"],
   // By default, all node_modules are ignored
   // Be sure to process bootstrap's reboot.css during testing
   // react-syntax-highlighter also needs an exception as well

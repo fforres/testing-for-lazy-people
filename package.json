@@ -26,6 +26,7 @@
     "babel-preset-react-app": "^9.1.1",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
+    "cross-env": "^7.0.0",
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -82,9 +83,9 @@
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "test:jest": "NODE_ENV=test jest -c config/jest/config-jest.js",
+    "test:jest": "cross-env NODE_ENV=test jest -c config/jest/config-jest.js",
     "test:jest:coverage": "yarn test:jest --coverage",
-    "test:storybook": "NODE_ENV=test jest -c config/jest/config-storybook.js",
+    "test:storybook": "cross-env NODE_ENV=test jest -c config/jest/config-storybook.js",
     "test:storybook:coverage": "yarn test:storybook --coverage"
   },
   "eslintConfig": {
