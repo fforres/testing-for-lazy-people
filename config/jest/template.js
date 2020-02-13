@@ -4,10 +4,10 @@
 module.exports = {
   verbose: true,
   collectCoverageFrom: [
-    "<rootDir>/src/**/*.test.{ts,tsx,js,jsx}",
-    "<rootDir>/src/**/*stories.{ts,tsx,js,jsx}",
-    "<rootDir>/src/**/*.{ts,tsx,js,jsx}",
+    "<rootDir>/src/components/**/*.test.{ts,tsx,js,jsx}",
+    "<rootDir>/src/components/**/*.{ts,tsx,js,jsx}",
     "!<rootDir>/src/**/index.ts",
+    "!<rootDir>/src/**/*stories.{ts,tsx,js,jsx}",
     "!<rootDir>/src/**/stories.*.{ts,tsx,js,jsx}",
     "!**/*.d.ts"
   ],

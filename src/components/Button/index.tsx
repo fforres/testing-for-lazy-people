@@ -3,8 +3,8 @@ import { StyledButton } from "./elements";
 import { ButtonProps } from "./types";
 
 const Button: React.FC<ButtonProps> = ({
-  onClick = () => {},
-  onHover = () => {},
+  onClick,
+  onHover,
   testId,
   children
 }) => (

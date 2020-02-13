@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledContainer } from "./elements";
+import { StyledContainer, Image } from "./elements";
 import Button from "../Button";
 import Text from "../Text";
 import { TextType } from "../Text/types";
@@ -7,10 +7,11 @@ import { UserProfilePropsType } from "./types";
 
 const UserProfile: React.FC<UserProfilePropsType> = ({ user }) => {
   const [texType, setTexType] = useState(TextType.SHORT);
+  const buttonText = texType === TextType.SHORT ? "longer" : "shorter";
   return (
     <StyledContainer>
       <h1>Hi! I'm {user.name}!</h1>
-      <img src={user.img} alt={`${user.name}`} />
+      <Image src={user.img} alt={`${user.name}`} />
       <h2>And this is my bio:</h2>
       <Text
         testId={"bio"}
@@ -26,7 +27,7 @@ const UserProfile: React.FC<UserProfilePropsType> = ({ user }) => {
           )
         }
       >
-        See my longer BIO
+        {`See my ${buttonText} BIO`}
       </Button>
     </StyledContainer>
   );

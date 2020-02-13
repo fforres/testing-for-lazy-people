@@ -83,7 +83,7 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "test": "cross-env NODE_ENV=test jest -c config/jest/config-jest.js",
-    "test:cov": "yarn test:jest --coverage",
+    "test:cov": "yarn test --coverage",
     "test:storybook": "cross-env NODE_ENV=test jest -c config/jest/config-storybook.js",
     "test:storybook:cov": "yarn test:storybook --coverage"
   },

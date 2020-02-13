@@ -7,3 +7,8 @@ export const StyledContainer = styled.div({
   justifyContent: "center",
   alignItems: "flex-start"
 });
+
+export const Image = styled.img({
+  margin: 10,
+  borderRadius: "50%"
+});
