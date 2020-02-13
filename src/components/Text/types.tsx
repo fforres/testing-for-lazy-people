@@ -3,6 +3,7 @@ export enum TextType {
   SHORT = "short"
 }
 export interface TextProps {
+  testId?: string;
   textType: TextType;
   text: string;
   longText: string;
