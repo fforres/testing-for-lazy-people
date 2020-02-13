@@ -5,7 +5,7 @@ import Button from "..";
 const textElement = <div>I'm a test!</div>;
 const textString = `<div>I'm a test!</div>`;
 
-describe("Button", () => {
+describe("Button With JS Hover", () => {
   it("Should render the correct children", () => {
     const { getByTestId } = render(
       <Button testId="test-0">{textElement}</Button>
