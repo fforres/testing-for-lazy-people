@@ -2,7 +2,11 @@ import React from "react";
 import { StyledContainer } from "./elements";
 import { TextType, TextProps } from "./types";
 
-const Text: React.FC<TextProps> = ({ textType, text, longText }) => {
+const ComplexComponent: React.FC<TextProps> = ({
+  textType,
+  text,
+  longText
+}) => {
   return (
     <StyledContainer>
       {textType === TextType.LONG && <p>{longText}</p>}
@@ -11,4 +15,4 @@ const Text: React.FC<TextProps> = ({ textType, text, longText }) => {
   );
 };
 
-export default Text;
+export default ComplexComponent;

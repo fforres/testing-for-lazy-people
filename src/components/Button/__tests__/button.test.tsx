@@ -11,7 +11,6 @@ describe("Button", () => {
       <Button testId="test-0">{textElement}</Button>
     );
     const test = getByTestId("test-0");
-    console.log({ test });
     expect(test).toContainHTML(textString);
   });
 });
