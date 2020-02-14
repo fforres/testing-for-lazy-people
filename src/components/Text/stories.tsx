@@ -8,9 +8,9 @@ export default {
   component: Text
 };
 
-export const ShortText: React.FC = () => (
-  <Text textType={TextType.SHORT} text={shortText} longText={longText} />
-);
+// export const ShortText: React.FC = () => (
+//   <Text textType={TextType.SHORT} text={shortText} longText={longText} />
+// );
 
 // export const LongText: React.FC = () => (
 //   <Text textType={TextType.LONG} text={shortText} longText={longText} />
